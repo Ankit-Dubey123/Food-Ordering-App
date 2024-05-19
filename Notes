@@ -1,0 +1,28 @@
+- package.json is a configuration for npm.
+- two types of dependencies dev(required in develepment phase) & normal(used in production also).
+- difference b/w package.json vs package-lock.json
+- npm means calling the command of npm, npx means executing a package.
+
+# Parcel (Read doc)
+
+- Dev Build
+- Local server
+- HMR : Hot module replacement (automatically refresh page)
+- Use file watching algorithm written in C++
+- Caching (Faster Builds)
+- Image optimization
+- Minification, bundling, compressing files
+- Consistent Hashing
+- Code Splitting
+- Differential Bundling (support older browsers)
+- Diagnostic
+- Error Handling
+- Host app on https
+- Tree Shaking (remove unused code)
+- Different dev and prod bundles
+
+3.
+
+- JSX is not HTML in js (html like or xml like
+  syntax)
+-
