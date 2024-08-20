@@ -3,21 +3,20 @@
 /\*
 
 - Header
-- - Logo
-- - Nav Items
+  Logo
+  Nav Items
 - Body
-- - Search
-- - RestaurantContainer
--     - RestaurantCard
--       - Img
--       - Name of Res, Star Rating, cuisines, delivery time etc
+  Search
+  RestaurantContainer
+  RestaurantCard
+  Img
+  Name of Res, Star Rating, cuisines, delivery time etc
 - Footer
-- - Copyright
-- - Links
-- - Address
-- - Contact
-
-\*/
+  Copyright
+  Links
+  Address
+  Contact
+  \*/
 
 # Imp
 
@@ -28,7 +27,7 @@
 - JSX is not HTML in js (html like or xml like syntax)
 - Config driven ui
 
-# Parcel (Read doc)
+## Parcel (Read doc)
 
 - Dev Build
 - Local server
@@ -46,7 +45,7 @@
 - Tree Shaking (remove unused code)
 - Different dev and prod bundles
 
-# Two types of export/import
+## Two types of export/import
 
 - Default Export/Import
   export default component
@@ -55,15 +54,15 @@
   export const component/var
   import {component} from "path"
 
-# --- Episode 05
+# Episode 05
 
-# React Hooks (Normal JS utility functions)
+## React Hooks (Normal JS utility functions)
 
 - useState() (Superpowerful State variable in React)
 - useEffect()
   \*Whenever a state variable update, React re-renders the component
 
-# How React Works behind the scene
+## How React Works behind the scene
 
 React is fast because of efficient DOM manipulation
 
@@ -78,7 +77,7 @@ React is fast because of efficient DOM manipulation
 - Diff Algorithm - Find the difference between updated and previous
   virtual DOM
 
-# --- Episode 06
+# Episode 06
 
 - Monolithic Architecture & Microservices Architecture
 - useEffect()
@@ -86,7 +85,7 @@ React is fast because of efficient DOM manipulation
 - cors policy (Akshay youtube)
 - whenever we change local state variable react rerender the components (triggers a reconciliation cycle)
 
-# --- Episode 07 (Routing)
+# Episode 07 (Routing)
 
 - If no dependency array => useEffect is called on every render
 - If dependency array is empty [] => useEffect is called on initial render(just once)
@@ -102,4 +101,37 @@ React is fast because of efficient DOM manipulation
 
 - Link vs anchor tag
 
-# --- Episode 08 (Let's get Classy)
+# Episode 08 (Let's get Classy)
+
+- Difference b/w class & functional component
+- Never update state variable directly
+- React component life cycle method
+- super keyword used in class based componenet
+- componentDigMount() - called when the component already mounted on the web page.(used to make an api call)
+- mounting: When the component is mounting, firstly constructor is called then render is called, and react updates dom and refs, and then componentDidMount() is called.
+  (to optimize the performance and user experience of applications)
+
+1. Render phase
+
+- The component's constructor (if present) is called.
+- The component’s render method is called to produce the initial Virtual DOM.
+- React performs reconciliation to determine the changes needed to create the initial DOM representation.
+
+2. commit phase
+
+- The changes calculated during the Render Phase are applied to the DOM.
+- The componentDidMount lifecycle method is called, allowing the component to perform any side effects now that it is in the DOM.
+  (1.41 hour)
+
+# Episode 09 (optimising our App)
+
+- Created our own custom hooks
+- check the status of the user ( online or offline)
+- code splitting / chunking / dynamic bundling / lazy loading (initialy should not have grocery code, whenever i will go to grocery, then come up)/ on demand loading -> splitted component into two javascript bundles.(used lazy, suspense components)
+
+# Episode 10 (jo dikhta hai, vo bikta hai) -> tailwind css
+
+- sass, styled component, material ui, bootsrap, ant design, chakra ui
+- tailwind css
+
+# Episode 11 (Data is the new Oil)
