@@ -135,3 +135,6 @@ React is fast because of efficient DOM manipulation
 - tailwind css
 
 # Episode 11 (Data is the new Oil)
+
+- Higher order components (takes a component(modify, enhance) and returns back a component)
+- Accordian Item
