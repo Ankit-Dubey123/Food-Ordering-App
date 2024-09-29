@@ -137,4 +137,51 @@ React is fast because of efficient DOM manipulation
 # Episode 11 (Data is the new Oil)
 
 - Higher order components (takes a component(modify, enhance) and returns back a component)
+
 - Accordian Item
+
+- Lifting the state up (in case of open one item then close all the other item) -> I dont want restaurantCategory to manage itself, I want restaurant menu to control all the category.
+  Controlled and Uncontrolled component->If restaurantCategory is managing itself then it is unControlled component otherwise it is controlled component if it is controlled by parent.
+
+- Props drilling (The problem with passing props) -> Can be solved using context.
+  In class based components we don't have hooks, so we can't use useContext here. <UserContext.Consumer>{(data)=>console.log(data)} </UserContext.Consumer>
+- how to pass context information to the app -> contextProvider
+- What is the difference between context and redux
+
+# Episode 12 (Let's build our store) - Redux
+
+- State container for JS Apps
+- Redux work in the data layer of an application (Redux is not mendatory).
+- React and Redux are different libraries.
+- zustand is also used for state management.
+- Redux offers easy debugging.
+- vanila redux vs redux toolkit
+- we will use redux toolkit
+- building cart flow, to store all the cart information, will use react store.
+
+- Redux store is kind of like a very big javascript object, with a lot of data inside it, and it is kept in a global central place.
+- What can be different slices in redux store: logical partitions are slices. we will create cart slice, user slice (login/logout), theme slice etc.
+
+- Working flow : when we click on a add button -> it dispatches an action -> which calls a function -> and function will modify cart slice.
+  This function is known as reducer.
+  And for reading the data we use selector, and selector will modify the component. This phenomenon is known as subscribing to the store. It means when the data will be changed in store, then header component will change automatically.
+
+- Redux Toolkit Steps
+
+  - Install @react/toolkit and react-redux
+  - Build our store
+  - Connect our store to our app
+  - Slice (cartSlice)
+  - dispatch (action)
+  - Selector (useSelector: hook comes from react-redux)
+
+- difference between
+  onClick = {func}: Passes the function reference and uses the event object by default.
+  onClick = {() => func(item)}: Uses an arrow function to pass a specific argument (item) to func when the click event occurs.
+  onClick = {func(item)}: Immediately invokes func with item and assigns the result to onClick, which is usually incorrect.
+
+- redux interview question : A better efficient way is to subscribing only specific slice in store instead of subscribing to the whole store.
+
+- In the older version of redux -> don't mutate state, and returning was mandatory. But in redux toolkit we have to mutate the state (as, state.items.push(action.payload)). Behind the scene, redux doing all these things using immer library. (Finding the difference b/w original and mutated state, and gives back a new state which is immutable state.)
+  solution is either mutate the original state or return an empty object.
+  Read about immer library.
