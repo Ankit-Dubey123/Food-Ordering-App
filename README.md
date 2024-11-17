@@ -1,4 +1,4 @@
-# YouTube Pro
+# Food Ordering App
 
 Welcome to the Food Ordering App project!
 
